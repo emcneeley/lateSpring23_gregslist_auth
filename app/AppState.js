@@ -19,6 +19,8 @@ class ObservableAppState extends EventEmitter {
   init() {
 
   }
+
+  houses = []
 }
 
 export const AppState = new Proxy(new ObservableAppState(), {

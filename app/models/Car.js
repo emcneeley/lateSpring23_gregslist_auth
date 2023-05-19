@@ -15,7 +15,7 @@ export class Car {
     this.creator = data.creator
   }
 
-
+  //TODO dont forget to create/ put in a delete function for the houses in the CarCard 
   get CarCard() {
     return /*html*/`
     <div class="col-md-4 my-3">
@@ -32,7 +32,7 @@ export class Car {
           </p>
           <div class="d-flex align-items-center justify-content-between border-top pt-2">
               
-              ${this.deleteButtonIfCarIsYours}
+           
           
               <div>
                 <span class="text-capitalize">${this.creator.name}</span>
@@ -65,7 +65,7 @@ export class Car {
   static CarForm() {
     return /*html*/`
     <div class="modal-header">
-      <h1 class="modal-title fs-5" id="exampleModalLabel">List Car</h1>
+      <h1 class="modal-title fs-5" id="exampleModalLabel">List House</h1>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
 
@@ -73,32 +73,32 @@ export class Car {
       <div class="modal-body container-fluid">
         <section class="row">
           <div class="mb-3 col-6">
-            <label for="make" class="form-label">Car Make</label>
-            <input required minlength="3" maxlength="20" type="text" class="form-control" id="make" name="make"
-              placeholder="Car Make">
+            <label for="year" class="form-label">House Year</label>
+            <input required minlength="3" maxlength="20" type="text" class="form-control" id="year" name="year"
+              placeholder="House Year">
           </div>
           <div class="mb-3 col-6">
-            <label for="model" class="form-label">Car Model</label>
-            <input required minlength="3" maxlength="20" type="text" class="form-control" id="model" name="model"
-              placeholder="Car Model">
+            <label for="bedrooms" class="form-label">Bedrooms</label>
+            <input required minlength="3" maxlength="20" type="text" class="form-control" id="bedrooms" name="bedrooms"
+              placeholder="Bedrooms">
           </div>
           <div class="mb-3 col-6">
-            <label for="year" class="form-label">Car Year</label>
-            <input required min="1920" type="number" class="form-control" id="year" name="year"  placeholder="Car Year">
+            <label for="bathrooms" class="form-label">Bathrooms</label>
+            <input required min="1920" type="number" class="form-control" id="bathrooms" name="bathrooms"  placeholder="Bathrooms">
           </div>
           <div class="mb-3 col-6">
-            <label for="price" class="form-label">Car Price</label>
+            <label for="price" class="form-label">House Price</label>
             <input required min="2000" max="1000000" type="number" class="form-control" id="price" name="price"
-              placeholder="Car Price">
+              placeholder="House Price">
           </div>
           <div class="mb-3 col-12">
-            <label for="description" class="form-label">Car Description</label>
+            <label for="description" class="form-label">House Description</label>
             <input required minlength="3" maxlength="50" type="text" class="form-control" id="description" name="description"
-              placeholder="Car Description">
+              placeholder="House Description">
           </div>
           <div class="mb-3 col-12">
-            <label for="imgUrl" class="form-label">Car Image</label>
-            <input required type="text" class="form-control" id="imgUrl" name="imgUrl" placeholder="Car Image">
+            <label for="imgUrl" class="form-label">House Image</label>
+            <input required type="text" class="form-control" id="imgUrl" name="imgUrl" placeholder="House Image">
           </div>
         </section>
       </div>
